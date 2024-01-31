@@ -86,6 +86,11 @@ RUN cd /tmp && \
     ln -s /usr/local/bin/wkhtmltopdf /usr/bin && \
     ln -s /usr/local/bin/wkhtmltoimage /usr/bin
 
+RUN composer require laravel/ui
+
+RUN apt-get install -y nodejs \
+    npm
+
 WORKDIR /www
 
 EXPOSE 9000
